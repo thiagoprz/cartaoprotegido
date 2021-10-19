@@ -1,5 +1,5 @@
 <?php
-namespace Thiagoprz\CartaoProtegido\Types;
+namespace Thiagoprz\CartaoProtegido\http;
 
 /**
  * @package Thiagoprz\CartaoProtegido\Types

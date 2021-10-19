@@ -17,6 +17,8 @@ return [
 
     // URL padrão
     'baseUrl' => env('BRASPAG_BASEURL', 'https://cartaoprotegidoapi.braspag.com.br/'),
+    // URL de autenticação
+    'authUrl' => env('BRASPAG_AUTHURL', 'https://auth.braspag.com.br/oauth2/token'),
 
     // Timeout de requisições
     'timeout' => env('BRASPAG_TIMEOUT', 0),

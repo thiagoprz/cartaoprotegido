@@ -37,12 +37,12 @@ class Client
     /**
      * @link https://braspag.github.io//manual/cartao-protegido-api-rest?shell#etapa-de-autentica%C3%A7%C3%A3o
      * @throws \GuzzleHttp\Exception\GuzzleException
-     * @return \Thiagoprz\CartaoProtegido\Types\AuthResponse
+     * @return \Thiagoprz\CartaoProtegido\http\AuthResponse
      */
     private function authenticate()
     {
         return Cache::remember('token', config('braspag-cartao-protegido.tokenCachedTime'), function() {
-            $res = $this->httpClient->post('/oauth2/token', [
+            $res = $this->httpClient->post(config('braspag-cartao-protegido.authUrl'), [
                 'headers' => [
                     'Authorization' => 'Basic ' . config('braspag-cartao-protegido.clientId') . ':' . config('braspag-cartao-protegido.clientSecret'),
                     'Content-Type' => 'application/x-www-form-urlencoded',

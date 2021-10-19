@@ -13,7 +13,7 @@ class Token
     /**
      * @param string $Alias
      * @param \Thiagoprz\CartaoProtegido\Types\Card|array $Card
-     * @return mixed
+     * @return \Thiagoprz\CartaoProtegido\http\TokenCreateResponse
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public static function create($Alias, $Card)
